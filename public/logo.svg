@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 64" role="img" aria-labelledby="title">
+  <title id="title">CitChat</title>
+  <rect width="64" height="64" rx="16" fill="#101827"/>
+  <path d="M17 14h30a9 9 0 0 1 9 9v17a9 9 0 0 1-9 9H30L18 57v-8h-1a9 9 0 0 1-9-9V23a9 9 0 0 1 9-9Z" fill="#38dec7"/>
+  <circle cx="24" cy="32" r="3.5" fill="#101827"/>
+  <circle cx="40" cy="32" r="3.5" fill="#101827"/>
+  <text x="78" y="43" fill="#f2faf9" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="750" letter-spacing="-1.5">CitChat</text>
+</svg>

@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ChatSecrets | Hacker Terminal',
-  description: 'Ephemeral room-based chat. No account required.',
+  title: 'CitChat',
+  description: 'Ngobrol langsung di CitChat.',
   robots: { index: false, follow: false },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body>{children}</body></html>;
+  return <html lang="id"><body>{children}</body></html>;
 }
