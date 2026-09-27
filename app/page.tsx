@@ -1,3 +1,3 @@
 export default function Home() {
-return <iframe src="https://ngobrol.streamlit.app/?embed=true" title="Ngobrol" />;
+return <iframe src="https://ngobrol.streamlit.app/?embed=true&template=true" title="Ngobrol" />;
 }
