@@ -1,0 +1,29 @@
+:root { color-scheme: dark; font-family: 'Courier New', monospace; color: #b9ffd0; background: #020805; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at top, #073c22 0, transparent 65%); min-height: 100vh; }
+main { max-width: 880px; margin: auto; padding: 48px 20px; }
+h1 { font-size: clamp(2rem, 6vw, 3.7rem); letter-spacing: -2px; line-height: 1.12; color: #e6ffed; }
+h1 span, .badge { color: #42f88b; }
+h2 { font-size: 1.1rem; overflow-wrap: anywhere; }
+p { line-height: 1.6; }
+aside, footer, .muted { color: #99b8a4; font-size: .85rem; line-height: 1.6; }
+aside { border-left: 3px solid #42f88b; padding: 8px 16px; }
+.panel { margin: 28px 0; padding: 24px; border: 1px solid #24643b; border-radius: 8px; background: #031209e8; box-shadow: 0 12px 60px #0005; }
+label { display: block; margin: 16px 0 8px; }
+input:not([type=checkbox]), textarea { display: block; width: 100%; background: #010a05; border: 1px solid #397c4f; color: #dcffe7; padding: 12px; font: inherit; border-radius: 4px; }
+textarea { resize: vertical; }
+button { font: inherit; cursor: pointer; background: #0d3a21; color: #b9ffd0; border: 1px solid #3fa663; padding: 10px 16px; border-radius: 4px; margin-top: 12px; }
+button:hover { background: #175833; }
+button:disabled { opacity: .5; cursor: wait; }
+:focus-visible { outline: 2px solid #6deeff; outline-offset: 3px; }
+.toolbar { display: flex; gap: 12px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.toolbar label { margin: 8px 0; }
+.log { height: 380px; overflow-y: auto; margin: 20px 0; border: 1px solid #24643b; padding: 12px; background: #0008; }
+article { border-left: 2px solid #42f88b; padding: 10px 14px; margin-bottom: 12px; background: #0a281766; overflow-wrap: anywhere; }
+article.mine { border-color: #6deeff; }
+article p { white-space: pre-wrap; margin: 8px 0 0; }
+.meta { font-size: .8rem; color: #a0cbb0; }
+.error { color: #ffadb3; }
+.danger { color: #ffadb3; border-color: #a64b54; background: #39181c; margin-top: 24px; }
+footer { text-align: center; }
+@media (max-width: 540px) { main { padding: 24px 12px; } .panel { padding: 16px; } .log { height: 340px; } }
