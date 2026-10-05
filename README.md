@@ -7,7 +7,7 @@ Next.js App Router + TypeScript, native Node AES-256-GCM, Upstash Redis REST. No
 Use Node.js 22 LTS or newer.
 
 ```sh
-cd /Users/macbookpro/Desktop/chat/chatsecrets-vercel
+cd chatsecrets-vercel
 npm install
 cp .env.example .env.local
 openssl rand -hex 32
