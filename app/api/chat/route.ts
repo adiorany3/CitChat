@@ -50,9 +50,7 @@ export async function POST(request: NextRequest) {
     const ip = request.headers.get('x-vercel-forwarded-for') || request.headers.get('x-forwarded-for') || 'local';
     const actor = action === 'join' ? createHash('sha256').update(ip).digest('hex') : session.id;
     const prefix = `cs:{${session.room}}`;
-    const presence = seal({ id: session.id, name: session.name }, 'presence');
-    // Keep one stable presence member per session instead of generating one per heartbeat.
-    session.presence ||= presence;
+    if (action === 'join') session.presence = seal({ id: session.id, name: session.name }, 'presence');
     const encrypted = action === 'send' ? seal({ id: randomUUID(), sender: session.id, username: session.name, text, time: Date.now() }, 'message') : '';
     const result = await redis('EVAL', script, 5, `${prefix}:room`, `${prefix}:log`, `${prefix}:online`, `${prefix}:lock`, `cs:{${session.room}}:rate:${actor}`, action, session.presence, session.generation, encrypted);
     if (result[0] === 'rate') return reply({ error: 'Too many requests. Wait one minute.' }, 429);

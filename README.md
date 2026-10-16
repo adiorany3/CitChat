@@ -33,6 +33,8 @@ Vercel's filesystem is not persistent shared storage. Redis is required; there i
 
 ## Behavior
 
+- The web page embeds the Streamlit chat client (`ngobrol.streamlit.app`) in an iframe; `KeepAlive` pings its `/healthz` endpoint every 5 minutes while the tab is visible.
+- The native `/api/chat` backend (join/poll/send/destroy over Upstash Redis) remains available for API clients.
 - Create/join case-sensitive named rooms; random room generation and fragment-based invite links.
 - Username and room fixed while joined. Reload allows another join.
 - Chat, ping, optional browser-generated sound, WIB timestamps, online presence.
